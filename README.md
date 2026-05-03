@@ -18,6 +18,7 @@
 | [docs/adr/](docs/adr/) | 架构决策（ADR）目录，有决策时新增 `xxx.md` |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 贡献方式与 PR 约定 |
 | [SECURITY.md](SECURITY.md) | 漏洞报告方式 |
+| [LICENSE](LICENSE) | MIT |
 
 ## 状态
 
@@ -34,4 +35,4 @@ cd patchbay
 
 ## 许可证
 
-待定（规划建议 MIT 或 Apache-2.0）。
+[MIT License](LICENSE)（Copyright (c) 2026 yclenove）。使用本软件须自行遵守 Telegram、Discord 等平台服务条款及所在地法律法规；详见仓库内规划文档中的免责声明与「不支持」说明。

@@ -114,7 +114,7 @@
 | 0.1 | 单一主仓入口 README：定位、对比表、**不支持列表**                                                               | 新人 15 分钟理解该不该用     |
 | 0.2 | `docker-compose.yml` 一键起 **`patchbay`（Go）+ Postgres + Console**（前端构建产物由 nginx 或 Go embed 托管） | 新机器 10 分钟内看到控制台登录页 |
 | 0.3 | 环境变量模板与 **密钥轮换说明**                                                                           | 无默认弱口令             |
-| 0.4 | 开源协议（建议 MIT/Apache 二选一）与 **免责声明**（用户对其群内容与法律负责）                                              | 法务可给一次性意见          |
+| 0.4 | 根目录 **MIT License**；**免责声明**（用户对其群内容与法律负责）见 README 与 §13                                              | MIT 已定；免责文案可法务过目   |
 
 
 ### Phase 1：MVP — Telegram 生产可用（4–6 周）
@@ -325,4 +325,4 @@
 
 ---
 
-*文档版本：v1.4 | 主仓 [https://github.com/yclenove/patchbay](https://github.com/yclenove/patchbay) | 项目名 **Patchbay**；技术栈 **全 Go + Vue + Postgres**；§8.6 已对齐上游 relay 进展说明；可根据实际投入每季度修订。*
+*文档版本：v1.5 | 开源许可 **MIT**（见仓库 `LICENSE`）| 主仓 [https://github.com/yclenove/patchbay](https://github.com/yclenove/patchbay) | 项目名 **Patchbay**；技术栈 **全 Go + Vue + Postgres**；可根据实际投入每季度修订。*
