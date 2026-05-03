@@ -49,6 +49,7 @@ cd patchbay
 
 - 产品规划：[PRODUCT_PLAN.md](PRODUCT_PLAN.md)  
 - 对照旧实现：[LEGACY_REPOS.md](LEGACY_REPOS.md)  
+- Cursor 规则：仓库根 [`.cursor/rules/`](../.cursor/rules/)（综合自 `telegram-query-bot`、`opencode-sync` 等旧项目后裁剪为 Patchbay 语境）
 
 ## 待补充（代码就绪后填写）
 

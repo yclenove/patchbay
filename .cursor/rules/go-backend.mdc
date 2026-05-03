@@ -1,0 +1,24 @@
+---
+description: Go layout, errors, persistence, and API style for Patchbay backend
+globs: "**/*.go,**/go.mod,**/go.sum"
+---
+
+# Go 后端约定 / Go backend conventions
+
+## 中文
+
+- **结构**：`cmd/patchbay` 入口；`internal/relay`（或 `core`）、`internal/bot`、`internal/api`、`internal/store` 分域；避免巨型 `util`/`common` 垃圾桶。
+- **错误**：用 `fmt.Errorf("...: %w", err)` 保留链；HTTP/API 层把内部错误转成 **用户可读、无敏感细节** 的响应。
+- **数据库**：PostgreSQL；迁移脚本可版本化（如 `migrations/`）；查询用参数绑定，**禁止**字符串拼接用户可控 SQL。
+- **接口**：确有双实现或测试替身再抽 interface；不要为了「优雅」过度抽象。
+- **验证**：默认 `go test ./...` 应绿；中继/限流/环路检测等加单元测试优先。
+- **依赖**：新增库前评估必要性、许可证、维护度；避免为小事引重依赖。
+
+## English
+
+- **Layout**: keep `cmd/patchbay` thin; split relay/core, bot adapters, HTTP API, and storage under `internal/`.
+- **Errors**: wrap with `%w`; API layer maps failures to safe client messages.
+- **SQL**: parameterized queries only; keep migrations versioned.
+- **Interfaces**: introduce only when multiple implementations are real.
+- **Quality**: keep `go test ./...` green; add tests for relay, dedupe, loop detection, rate limits.
+- **Dependencies**: justify new deps (license, maintenance, size).

@@ -1,0 +1,20 @@
+---
+description: Logging, tests, Git hygiene (from opencode-sync, adapted for Patchbay)
+globs: "**/*.go,**/.gitignore,**/go.mod,**/web/**/*"
+---
+
+# 可观测、测试、Git / Observability, tests, Git
+
+## 中文
+
+- **日志**：便于排障；含 `route_id`、`component` 等安全上下文即可，避免敏感载荷。
+- **异常**：不静默吞错；返回或记录时带上下文。
+- **测试**：Go 保持 `go test ./...`；前端有 `web/` 后补 `npm test`/`vitest`（若配置）。
+- **Git**：遵守 `.gitignore`；单提交聚焦一事；不把文档+大重构+无关格式化混在同一 commit（除非明确 chore）。
+
+## English
+
+- Logs aid diagnosis without leaking secrets.
+- Do not swallow errors; add context.
+- Keep Go tests green; add frontend checks when `web/` exists.
+- Respect `.gitignore`; keep commits focused.

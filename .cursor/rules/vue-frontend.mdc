@@ -1,0 +1,22 @@
+---
+description: Vue 3 + TypeScript console conventions for Patchbay
+globs: "**/web/**/*.vue,**/web/**/*.ts,**/web/**/*.tsx,**/web/vite.config.*"
+---
+
+# Vue 控制台约定 / Vue console conventions
+
+## 中文
+
+- **栈**：Vue 3 + TypeScript + Vite；组件与状态保持可读，避免巨型单文件。
+- **API**：通过同源 `/api` 或配置的 `VITE_*` 基地址访问 Go 后端；不要在浏览器里硬编码 Token。
+- **表单与错误**：接口错误展示简洁文案；不把完整堆栈暴露给最终用户。
+- **构建**：合并前在 `web/` 下执行 `npm run build`（目录存在后）；保持与后端 API 类型或 OpenAPI 同步（若引入生成流程）。
+- **依赖**：UI 组件库（如 Element Plus）选定后少换；样式与间距保持一致。
+
+## English
+
+- Use Vue 3 + TS + Vite; keep components maintainable.
+- Call backend via same-origin `/api` or configured base URL; never embed secrets in frontend bundles.
+- Surface actionable errors to users; avoid raw stack traces in UI.
+- Run `npm run build` under `web/` before merging when the app exists.
+- Pick a UI kit and stick with it for consistency.

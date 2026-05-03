@@ -1,0 +1,22 @@
+---
+description: Secrets, logs, IM platform safety, and data handling for Patchbay
+globs: "**/*"
+---
+
+# 安全 / Security
+
+## 中文
+
+- **密钥**：Bot Token、数据库密码、Webhook 签名密钥等 **只** 来自环境变量或 Docker secrets / 本地 `.env`（不入库）；禁止写进 README、测试、示例提交。
+- **日志**：结构化日志可带 `route_id`、`chat_id` 等排障上下文；**禁止**打印完整 Token、Authorization 头、用户消息全文（除非显式调试开关且默认关闭）。
+- **平台**：仅官方 **Telegram Bot API、Discord Bot API**；不要引导使用违反平台 ToS 或当地法律的场景。
+- **破坏性默认**：删除路由、清空队列、覆盖远端状态等需 **显式** 与二次确认；默认偏保守。
+- **Git**：`.env`、`*.pem`、导出会话、数据库 dump、本地调试大包不进版本库（见 `.gitignore`）。
+
+## English
+
+- **Secrets**: tokens/passwords/signing keys live in env / secrets / local `.env` only; never commit them into docs, tests, or samples.
+- **Logging**: structured logs OK; never log raw tokens, auth headers, or full message bodies by default.
+- **Platforms**: official Bot APIs only; do not implement or document grey-area gambling/personal-WeChat automation.
+- **Safety defaults**: destructive operations require explicit flags/confirmations.
+- **Git hygiene**: keep dumps, exports, and `.env` out of commits.

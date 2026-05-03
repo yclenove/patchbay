@@ -19,6 +19,8 @@
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 贡献方式与 PR 约定 |
 | [SECURITY.md](SECURITY.md) | 漏洞报告方式 |
 | [LICENSE](LICENSE) | MIT |
+| [`.cursor/rules/`](.cursor/rules/) | Cursor 规则（`.mdc`，与 `CLAUDE.md` 配套） |
+| [AGENTS.md](AGENTS.md) | 与 Claude 约定对齐，供读 `AGENTS.md` 的工具使用 |
 
 ## 状态
 

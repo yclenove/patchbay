@@ -1,0 +1,23 @@
+---
+description: Patchbay product scope, phases, stack, and boundaries (from legacy rules + PRODUCT_PLAN)
+globs: "**/*"
+---
+
+# Patchbay 产品与阶段 / Product & phases
+
+## 中文
+
+- **定位**：自托管 TG（主）/ Discord（次）消息中继 + 规则 + Web 控制台 + Webhook；**防循环、防炸群、可观测** 为默认心智。
+- **技术栈**：Go（`patchbay` 单二进制）+ Vue 3 + TS + Vite + PostgreSQL + Docker Compose；**不要**把 JVM/Node 作为核心运行时引入本仓。
+- **规划真相源**：`docs/PRODUCT_PLAN.md`。当前优先 **Phase 0 → Phase 1**；勿跳过 Phase 0 堆大功能。
+- **不做**：比 Matterbridge 拼「协议数量」；个人微信非官方协议；完整替代 Chatwoot；灰产/赌资相关能力。
+- **一期边界**：先 **单向中继** 与生产可跑通；双向必须文档化环路策略与显式确认（见规划）。
+- **旧仓**：`telegram-relay` / `telegram-relay-admin` 仅对照；**Java 老仓不扩展**。
+
+## English
+
+- **Scope**: self-hosted Telegram-first / Discord-second relay, rules, web console, webhooks; ship safe defaults (anti-loop, rate limits, observability).
+- **Stack**: Go single binary `patchbay`, Vue 3 + TS + Vite, PostgreSQL, Docker Compose; do not add JVM/Node as core runtime here.
+- **Source of truth**: `docs/PRODUCT_PLAN.md`. Prefer Phase 0 → Phase 1 ordering.
+- **Out of scope**: “most IM protocols wins”; unofficial WeChat personal bots; full Chatwoot replacement; gambling/cash-game features.
+- **Legacy**: read `telegram-relay` / `telegram-relay-admin` for ideas only; do not extend Java bots in this repo.

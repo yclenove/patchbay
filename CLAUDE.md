@@ -1,10 +1,22 @@
 # Claude Code — Patchbay 项目说明
 
-本文件在每次会话开始会被读取。请优先遵守本文与 `docs/PRODUCT_PLAN.md`。
+本文件在每次会话开始会被读取。请优先遵守本文与 `docs/PRODUCT_PLAN.md`。  
+**Cursor IDE** 补充规则见 **`.cursor/rules/*.mdc`**（与本文不冲突；若有冲突以本文 + `docs/PRODUCT_PLAN.md` 为准）。  
+另见 **`AGENTS.md`**（供读 `AGENTS.md` 的工具与 OpenCode 类工作流对齐用）。
 
 ## 项目是什么
 
 **Patchbay**：自托管的 Telegram（主）/ Discord（次）消息中继与规则引擎，带 Web 控制台与 Webhook 扩展；默认强调 **防循环、防炸群、可观测**。官方仓库：https://github.com/yclenove/patchbay
+
+## 文档语言（综合 opencode-sync / 旧项目习惯）
+
+- **用户可读文档**（README、`docs/*.md`）：以 **中文** 为主，或 **中英对照**；命令名、配置键、包名、环境变量、URL **保持英文原文**。
+- **提交信息**：**中文或英文**均可，要求简短、一事一提交。
+
+## 对外契约
+
+- 仅依赖 **Telegram Bot API、Discord Bot API** 的公开能力；平台行为变更时适配层需重新验证。
+- **配置、路由表、Webhook URL** 等属于对外契约，变更时同步文档与 `CHANGELOG.md`（有用户可见变化时）。
 
 ## 已定技术栈（不要擅自改栈）
 
@@ -23,6 +35,13 @@
 完整规划见 **`docs/PRODUCT_PLAN.md`**（路线图、Phase 0–4、NFR、风险、竞品对比）。
 
 当前优先级：**Phase 0**（README、Compose、Postgres、最小控制台登录）→ **Phase 1**（TG 单向广播 MVP）。不要跳过 Phase 0 直接堆功能。
+
+## 工程质量（综合 opencode-sync / im-bot-hub）
+
+- **小步可构建**：优先小而正确的改动；大改动前用 **Plan mode** 出方案。
+- **不吞异常**：错误要带上下文返回或记录；用户可见输出简洁，避免直接堆栈。
+- **文档同步**：命令、Compose、API、阶段边界变化时更新 `README.md` / `docs/DEV.md` / `docs/PRODUCT_PLAN.md` 等相关文档。
+- **测试门槛**：Go 默认 **`go test ./...`**；`web/` 落地后加上前端 build（及后续测试命令）。
 
 ## 历史代码在哪里看（只读参考，不复制进本仓也可）
 
@@ -43,7 +62,7 @@
 2. **不要**实现个人微信非官方协议、赌资/抽水相关能力。  
 3. 默认路由：**单向**优先；双向必须带环路检测与显式确认（见规划文档）。  
 4. 日志：结构化；默认避免持久化消息全文（隐私）。  
-5. 大改动前用 **Plan mode** 出方案；小步提交、保持 `main` 可构建。
+5. 小步提交、保持 `main` 可构建。
 
 ## 常用命令（占位，随仓库填充后更新）
 
@@ -64,8 +83,10 @@ go test ./...
 |------|------|
 | `docs/PRODUCT_PLAN.md` | 产品与技术规划全文 |
 | `docs/LEGACY_REPOS.md` | 旧仓库列表与本机路径 |
-| `docs/DEV.md` | 本地开发（占位，随 Phase 0 填命令） |
+| `docs/DEV.md` | 本地开发（含 Docker Postgres） |
 | `docs/adr/` | 架构决策（ADR），一事一文 |
+| `.cursor/rules/*.mdc` | Cursor 规则（产品 / 安全 / Go / Vue / 文档与 Git） |
+| `AGENTS.md` | 与本文对齐，供读 AGENTS 的工具使用 |
 | `CONTRIBUTING.md` | 贡献与 PR 约定 |
 | `SECURITY.md` | 漏洞报告 |
 | `README.md` | 对外简介与快速开始 |
