@@ -227,7 +227,8 @@
 ### 8.6 与历史代码关系
 
 - 现有 **Go relay** 逻辑可迁移或对照实现；**Vue admin** 可作为 UI 起点重写页面。  
-- **Java bot 仓**不作为目标栈；新功能一律不进 JVM。
+- **Java bot 仓**不作为目标栈；新功能一律不进 JVM。  
+- **上游参考** [telegram-relay](https://github.com/yclenove/telegram-relay) 的 `main` 已推进：含 **接入凭证（ingest credentials）**、**规则预设**、部署文档与打包脚本等；对照 API/数据模型时以该仓 **最新 `origin/main`** 为准，勿再以未同步的旧目录为真相源。
 
 ---
 
@@ -324,4 +325,4 @@
 
 ---
 
-*文档版本：v1.3 | 主仓 [https://github.com/yclenove/patchbay](https://github.com/yclenove/patchbay) | 项目名 **Patchbay**；技术栈 **全 Go + Vue + Postgres**；与「第二条线：TG/Discord 自托管中继」一致，可根据实际投入每季度修订。*
+*文档版本：v1.4 | 主仓 [https://github.com/yclenove/patchbay](https://github.com/yclenove/patchbay) | 项目名 **Patchbay**；技术栈 **全 Go + Vue + Postgres**；§8.6 已对齐上游 relay 进展说明；可根据实际投入每季度修订。*

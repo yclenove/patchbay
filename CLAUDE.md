@@ -35,7 +35,7 @@
 | telegram-query-bot | https://github.com/yclenove/telegram-query-bot | Java，**非目标栈** |
 | im-bot-hub | https://github.com/yclenove/im-bot-hub | Java，**非目标栈** |
 
-更细的链接、克隆说明与 **本机 `H:\aicoding` 下已检出路径**（含 `telegram-notification` = relay 后端）见 **`docs/LEGACY_REPOS.md`**。
+更细的链接、克隆说明与 **本机 `H:\aicoding` 下已检出路径**见 **`docs/LEGACY_REPOS.md`**。对照 Go 中继请用 **`H:\aicoding\telegram-relay`** 并与 `origin/main` 同步；勿依赖未 pull 的旧副本目录。
 
 ## 开发约束
 
