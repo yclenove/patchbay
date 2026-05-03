@@ -7,7 +7,7 @@ globs: "**/*"
 
 ## 中文
 
-- **文档是交付物**：命令行、配置键、Compose 行为、API 契约、阶段边界变更时，同步更新 `README.md`、`docs/DEV.md`、`docs/PRODUCT_PLAN.md` 或专门 `docs/*.md`。
+- **文档是交付物**：命令行、配置键、Compose 行为、API 契约、阶段边界变更时，同步更新 `README.md`、`README.en.md`（若涉及对外表述）、`docs/DEV.md`、`docs/PRODUCT_PLAN.md` 或专门 `docs/*.md`。
 - **用户可读文档**：以 **中文** 为主或中英对照；**代码标识符、包名、环境变量、URL、配置键** 保持英文原文。
 - **CHANGELOG**：对用户可见行为变化，维护 `CHANGELOG.md`（若尚未建立，首个用户可见版本起补上）。
 - **提交信息**：**请使用中文**，简短、一事一条；避免无意义占位符（与仓库 `CONTRIBUTING.md` 一致）。
@@ -15,7 +15,7 @@ globs: "**/*"
 
 ## English
 
-- Treat docs as part of shipping: update README, DEV, PRODUCT_PLAN (or focused docs) when CLI, config, compose, APIs, or phase boundaries change.
+- Treat docs as part of shipping: update `README.md`, `README.en.md` when user-facing messaging changes, plus DEV, PRODUCT_PLAN (or focused docs) when CLI, config, compose, APIs, or phase boundaries change.
 - Human-facing docs may be Chinese-first; identifiers and config keys stay English.
 - Maintain `CHANGELOG.md` for user-visible behavior changes once the project ships features publicly.
 - **Commit messages**: use **Chinese**, one topic per commit, per `CONTRIBUTING.md`.

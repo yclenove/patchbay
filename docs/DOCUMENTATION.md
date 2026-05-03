@@ -6,7 +6,8 @@
 
 | 路径 | 用途 |
 |------|------|
-| `README.md` | 项目入口（中英）、链接、快速开始 |
+| `README.md` | 项目入口（**中文为主**）、产品摘要、快速开始 |
+| `README.en.md` | 英文版入口（与中文版互链） |
 | `docs/PRODUCT_PLAN.md` | 产品与技术规划 |
 | `docs/DEV.md` | 本地环境、Docker Postgres |
 | `docs/LEGACY_REPOS.md` | 旧项目对照 |

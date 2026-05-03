@@ -42,7 +42,7 @@
 
 - **小步可构建**：优先小而正确的改动；大改动前用 **Plan mode** 出方案。
 - **不吞异常**：错误要带上下文返回或记录；用户可见输出简洁，避免直接堆栈。
-- **文档同步**：命令、Compose、API、阶段边界变化时更新 `README.md` / `docs/DEV.md` / `docs/PRODUCT_PLAN.md` 等相关文档。
+- **文档同步**：命令、Compose、API、阶段边界变化时更新 `README.md`、`README.en.md`（若影响英文读者）、`docs/DEV.md`、`docs/PRODUCT_PLAN.md` 等相关文档。
 - **测试门槛**：Go 默认 **`go test ./...`**；`web/` 落地后加上前端 build（及后续测试命令）。
 
 ## 历史代码在哪里看（只读参考，不复制进本仓也可）
@@ -91,4 +91,4 @@ go test ./...
 | `AGENTS.md`（本地） | 从本目录复制到根目录 |
 | `CONTRIBUTING.md` | 贡献与 PR 约定 |
 | `SECURITY.md` | 漏洞报告 |
-| `README.md` | 对外简介与快速开始 |
+| `README.md` / `README.en.md` | 对外简介（中文主文件 + 英文分文件）与快速开始 |
