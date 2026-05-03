@@ -15,6 +15,8 @@
 | `CONTRIBUTING.md` / `SECURITY.md` / `LICENSE` | 贡献、安全、许可 |
 | `docs/templates/ai-local/` | 可选：本地编辑器/辅助工具用的**模板**，按需复制到仓库根（见该目录 `README.md`） |
 
+**维护者（个人）**：过程稿、长篇设计与未定稿可放在配套 **私有** 仓库 [**patchbay-doc**](https://github.com/yclenove/patchbay-doc)，与代码分仓；分工与回流步骤见该仓 `README.md`、`WORKFLOW.md`。对外仍以本仓库 `docs/`、`README*` 与 ADR 为准。
+
 ## 2. 仅本机（已 `.gitignore`）
 
 | 路径 | 说明 |
