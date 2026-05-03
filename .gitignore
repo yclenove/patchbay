@@ -1,0 +1,36 @@
+# Binaries
+/patchbay
+/patchbayd
+*.exe
+*.dll
+*.so
+*.dylib
+/dist/
+
+# Go
+vendor/
+coverage.out
+*.test
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# Frontend
+node_modules/
+web/node_modules/
+web/dist/
+.npm
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
+
+# Claude / local
+.claude/*.local.*
