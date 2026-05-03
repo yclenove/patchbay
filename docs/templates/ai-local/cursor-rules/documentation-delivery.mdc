@@ -12,6 +12,7 @@ globs: "**/*"
 - **CHANGELOG**：对用户可见行为变化，维护 `CHANGELOG.md`（若尚未建立，首个用户可见版本起补上）。
 - **提交信息**：**请使用中文**，简短、一事一条；避免无意义占位符（与仓库 `CONTRIBUTING.md` 一致）。
 - **Cursor 规则**：根目录 `.cursor/rules/*.mdc` 由模板复制，不提交远端；**仓库级约定**以根目录 `CLAUDE.md` + `docs/PRODUCT_PLAN.md` 为准。
+- **公开 vs 私有**：过程稿、长篇设计在私有仓 **`yclenove/patchbay-doc`**；当前工作区若仅为 `patchbay`，勿假定能读取该路径。已定结论需写回 **`patchbay`** 的 `docs/` / ADR。
 
 ## English
 
@@ -20,3 +21,4 @@ globs: "**/*"
 - Maintain `CHANGELOG.md` for user-visible behavior changes once the project ships features publicly.
 - **Commit messages**: use **Chinese**, one topic per commit, per `CONTRIBUTING.md`.
 - Local `.cursor/rules/` complements root `CLAUDE.md` + `docs/PRODUCT_PLAN.md`; do not contradict them.
+- **Public vs private docs**: drafts and long-form design may live in private repo **`yclenove/patchbay-doc`**; if the workspace is only `patchbay`, do not assume that tree exists. Ship finalized conclusions into **`patchbay`** `docs/` or ADRs.

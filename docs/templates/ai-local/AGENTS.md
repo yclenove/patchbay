@@ -13,6 +13,9 @@
 | Cursor IDE 规则（`.mdc`） | 根目录 `.cursor/rules/`（由 `cursor-rules/` 复制） |
 | 本地开发与 Docker Postgres | [`docs/DEV.md`](docs/DEV.md) |
 | 旧项目路径与链接 | [`docs/LEGACY_REPOS.md`](docs/LEGACY_REPOS.md) |
+| 私有设计 / 过程文档 | GitHub **`yclenove/patchbay-doc`**（与公开 **`yclenove/patchbay`** 分仓；当前工作区可能不含该仓库） |
+
+**双仓**：公开仓放代码与已定稿 `docs/`；私有 **`patchbay-doc`** 放脑暴与长篇设计。定稿结论应摘要进 `patchbay` 的 `docs/PRODUCT_PLAN.md` 或 `docs/adr/`。勿在任仓提交生产密钥。
 
 ## 综合来源说明
 

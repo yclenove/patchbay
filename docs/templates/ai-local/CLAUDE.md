@@ -10,6 +10,21 @@
 
 **Patchbay**：自托管的 Telegram（主）/ Discord（次）消息中继与规则引擎，带 Web 控制台与 Webhook 扩展；默认强调 **防循环、防炸群、可观测**。官方仓库：https://github.com/yclenove/patchbay
 
+## 双仓：公开代码 vs 私有设计文档（必读）
+
+作者采用 **两个 GitHub 仓库** 分工；当前会话若只打开了 **`patchbay` 工作区**，默认**看不到**私有仓里的文件，除非用户另行挂载路径或粘贴内容。
+
+| 仓库 | 可见性 | 用途 |
+|------|--------|------|
+| **[patchbay](https://github.com/yclenove/patchbay)** | **公开** | 代码、`README.md` / `README.en.md`、`docs/` 已定稿文档、ADR、可对世界负责的产品表述与契约 |
+| **[patchbay-doc](https://github.com/yclenove/patchbay-doc)** | **私有** | 过程稿、详细设计、脑暴、调研笔记、含个人/业务上下文的材料；**不**要求与公开仓逐字同步 |
+
+**协作约定**
+
+- 在公开仓改代码/写用户文档时，以 **`patchbay` 内文件** 为准；不要臆测私有仓目录结构。  
+- 用户从 **`patchbay-doc`** 引用结论时，若需写进公开仓，应**摘成摘要或 ADR**，避免公开仓与私有长篇长期脱节。  
+- **生产密钥**仍勿写入任一仓库；私有仓 ≠ 密码本，敏感凭据用环境变量或密钥管理器。
+
 ## 文档语言（综合 opencode-sync / 旧项目习惯）
 
 - **用户可读文档**（README、`docs/*.md`）：以 **中文** 为主，或 **中英对照**；命令名、配置键、包名、环境变量、URL **保持英文原文**。
@@ -92,3 +107,4 @@ go test ./...
 | `CONTRIBUTING.md` | 贡献与 PR 约定 |
 | `SECURITY.md` | 漏洞报告 |
 | `README.md` / `README.en.md` | 对外简介（中文主文件 + 英文分文件）与快速开始 |
+| （外部）`yclenove/patchbay-doc` | 私有：过程设计稿；不在本 clone 内则不可读 |
