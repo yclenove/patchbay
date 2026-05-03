@@ -2,11 +2,10 @@
 
 Patchbay 尚在 **Phase 0**，欢迎 Issue 与小步 PR。开发前请先阅读：
 
-- [CLAUDE.md](CLAUDE.md)（给 Claude Code / 协作者的约定）
-- [AGENTS.md](AGENTS.md)（与 `CLAUDE.md` 对齐，供读 `AGENTS.md` 的工具）
+- [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md)（文档分层：远端 vs 本机 AI）
 - [docs/PRODUCT_PLAN.md](docs/PRODUCT_PLAN.md)（路线图与不做清单）
 - [docs/DEV.md](docs/DEV.md)（本地开发说明；随代码落地更新）
-- [`.cursor/rules/`](.cursor/rules/)（Cursor 编辑器规则，`.mdc`）
+- 使用 Claude Code / Cursor 时：按 [docs/templates/ai-local/README.md](docs/templates/ai-local/README.md) 在**仓库根**生成 `CLAUDE.md`、`AGENTS.md`、`.cursor/rules/`（这些路径已 `.gitignore`，不进入远端）
 
 ## 基本原则
 

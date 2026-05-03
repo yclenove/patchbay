@@ -34,3 +34,8 @@ Thumbs.db
 
 # Claude Code：本地 worktrees / 设置，勿提交（需要共享技能时用 git add -f）
 .claude/
+
+# 仅本机、给 AI 用（模板见 docs/templates/ai-local/；不提交远端）
+/CLAUDE.md
+/AGENTS.md
+.cursor/rules/

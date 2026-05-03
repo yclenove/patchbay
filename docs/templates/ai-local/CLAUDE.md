@@ -1,8 +1,10 @@
 # Claude Code — Patchbay 项目说明
 
+> **使用方式**：本文件为模板。请**复制到仓库根目录**并命名为 `CLAUDE.md`（该文件已列入 `.gitignore`，**不会**提交到远端）。Claude Code 默认读取根目录 `CLAUDE.md`。
+
 本文件在每次会话开始会被读取。请优先遵守本文与 `docs/PRODUCT_PLAN.md`。  
-**Cursor IDE** 补充规则见 **`.cursor/rules/*.mdc`**（与本文不冲突；若有冲突以本文 + `docs/PRODUCT_PLAN.md` 为准）。  
-另见 **`AGENTS.md`**（供读 `AGENTS.md` 的工具与 OpenCode 类工作流对齐用）。
+**Cursor IDE** 补充规则：将同目录下 **`cursor-rules/*.mdc`** 复制到仓库根 **`.cursor/rules/`**（该目录默认不提交远端）。若有冲突以本文 + `docs/PRODUCT_PLAN.md` 为准。  
+另在根目录放置从本目录复制的 **`AGENTS.md`**（供读 `AGENTS.md` 的工具使用）。
 
 ## 项目是什么
 
@@ -85,8 +87,8 @@ go test ./...
 | `docs/LEGACY_REPOS.md` | 旧仓库列表与本机路径 |
 | `docs/DEV.md` | 本地开发（含 Docker Postgres） |
 | `docs/adr/` | 架构决策（ADR），一事一文 |
-| `.cursor/rules/*.mdc` | Cursor 规则（产品 / 安全 / Go / Vue / 文档与 Git） |
-| `AGENTS.md` | 与本文对齐，供读 AGENTS 的工具使用 |
+| `.cursor/rules/*.mdc`（本地） | 从 `docs/templates/ai-local/cursor-rules/` 复制 |
+| `AGENTS.md`（本地） | 从本目录复制到根目录 |
 | `CONTRIBUTING.md` | 贡献与 PR 约定 |
 | `SECURITY.md` | 漏洞报告 |
 | `README.md` | 对外简介与快速开始 |

@@ -49,7 +49,8 @@ cd patchbay
 
 - 产品规划：[PRODUCT_PLAN.md](PRODUCT_PLAN.md)  
 - 对照旧实现：[LEGACY_REPOS.md](LEGACY_REPOS.md)  
-- Cursor 规则：仓库根 [`.cursor/rules/`](../.cursor/rules/)（综合自 `telegram-query-bot`、`opencode-sync` 等旧项目后裁剪为 Patchbay 语境）
+- 文档分层（人 / AI）：[DOCUMENTATION.md](DOCUMENTATION.md)  
+- AI 规则模板（复制到根目录后使用）：[templates/ai-local/README.md](templates/ai-local/README.md)
 
 ## 待补充（代码就绪后填写）
 

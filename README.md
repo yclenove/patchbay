@@ -6,21 +6,22 @@
 - **技术栈**：Go（`patchbay` 单二进制）+ Vue 3 + PostgreSQL + Docker Compose  
 - **产品规划**：[docs/PRODUCT_PLAN.md](docs/PRODUCT_PLAN.md)  
 - **历史代码索引**（对照用）：[docs/LEGACY_REPOS.md](docs/LEGACY_REPOS.md)  
-- **Claude Code** 请先读根目录 [CLAUDE.md](CLAUDE.md)
+- **文档分层**（人读 vs AI 本地）：[docs/DOCUMENTATION.md](docs/DOCUMENTATION.md)  
+- **Claude Code / Cursor**：克隆后请将 [docs/templates/ai-local/](docs/templates/ai-local/) 复制到仓库根（见该目录 `README.md`）；根目录 `CLAUDE.md`、`AGENTS.md`、`.cursor/rules/` **默认不提交远端**。
 
 ## 文档索引
 
 | 文档 | 说明 |
 |------|------|
+| [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md) | **人读**：哪些上远端、哪些仅本机 AI |
 | [docs/PRODUCT_PLAN.md](docs/PRODUCT_PLAN.md) | 产品与技术规划（Phase、栈、风险） |
 | [docs/LEGACY_REPOS.md](docs/LEGACY_REPOS.md) | 旧实现仓库与本机路径 |
-| [docs/DEV.md](docs/DEV.md) | 本地开发（占位，随代码补充） |
+| [docs/DEV.md](docs/DEV.md) | 本地开发（含 Docker Postgres） |
+| [docs/templates/ai-local/](docs/templates/ai-local/) | **模板**：`CLAUDE.md` / `AGENTS.md` / Cursor `.mdc`（复制到根目录使用） |
 | [docs/adr/](docs/adr/) | 架构决策（ADR）目录，有决策时新增 `xxx.md` |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 贡献方式与 PR 约定 |
 | [SECURITY.md](SECURITY.md) | 漏洞报告方式 |
 | [LICENSE](LICENSE) | MIT |
-| [`.cursor/rules/`](.cursor/rules/) | Cursor 规则（`.mdc`，与 `CLAUDE.md` 配套） |
-| [AGENTS.md](AGENTS.md) | 与 Claude 约定对齐，供读 `AGENTS.md` 的工具使用 |
 
 ## 状态
 
