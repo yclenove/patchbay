@@ -1,0 +1,29 @@
+# 仅用于本机开发：在 WSL（或任意有 Docker 的环境）里起 PostgreSQL 17
+# 用法：在仓库根目录执行
+#   docker compose -f deploy/docker-compose.postgres-dev.yaml up -d
+# 连接串（默认）：
+#   postgres://patchbay:patchbay_dev_change_me@127.0.0.1:5432/patchbay?sslmode=disable
+# 停止并删数据卷：
+#   docker compose -f deploy/docker-compose.postgres-dev.yaml down -v
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: patchbay-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: patchbay
+      POSTGRES_PASSWORD: patchbay_dev_change_me
+      POSTGRES_DB: patchbay
+    ports:
+      - "5432:5432"
+    volumes:
+      - patchbay_pgdata_dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U patchbay -d patchbay"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  patchbay_pgdata_dev:
