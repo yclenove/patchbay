@@ -33,7 +33,8 @@ git clone https://github.com/yclenove/telegram-relay-admin.git
 
 | GitHub 仓库 | 本机路径 | 备注 |
 |-------------|----------|------|
-| [telegram-relay](https://github.com/yclenove/telegram-relay) | **`H:\aicoding\telegram-notification`** | 文件夹名与仓库名不一致；`go.mod` 的 module 为 `github.com/yclenove/telegram-relay`，**这里就是 Go 中继后端**。 |
+| [telegram-relay](https://github.com/yclenove/telegram-relay) | **`H:\aicoding\telegram-relay`** | 已与仓库名一致的 clone，**对照 Patchbay 时优先用这个路径**。 |
+| 同上（历史副本） | **`H:\aicoding\telegram-notification`** | 若仍存在：多为早期检出，目录名与仓库名不一致；`go.mod` 同为 `github.com/yclenove/telegram-relay`。两处请勿各改各的而不 `git pull` 同步，避免分叉。 |
 | [telegram-relay-admin](https://github.com/yclenove/telegram-relay-admin) | **`H:\aicoding\telegram-relay-admin`** | Vue 管理台；README 写明通过 `/api/v2` 与 relay 通信。 |
 | [telegram-query-bot](https://github.com/yclenove/telegram-query-bot) | **`H:\aicoding\telegram-query-bot`** | Java（`backend/pom.xml`）；仓内若有 `.claude/worktrees/`，为本地工作树副本，**以根目录 `backend` 为主**即可。 |
 | [im-bot-hub](https://github.com/yclenove/im-bot-hub) | **`H:\aicoding\im-bot-hub`** | Java（`backend/pom.xml`）；同上，注意 `.claude/worktrees/` 仅为工具生成目录。 |
