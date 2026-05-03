@@ -63,5 +63,9 @@ go test ./...
 | 文件 | 用途 |
 |------|------|
 | `docs/PRODUCT_PLAN.md` | 产品与技术规划全文 |
-| `docs/LEGACY_REPOS.md` | 旧仓库列表与如何对照阅读 |
-| `README.md` | 对外简介与快速开始（保持与规划一致） |
+| `docs/LEGACY_REPOS.md` | 旧仓库列表与本机路径 |
+| `docs/DEV.md` | 本地开发（占位，随 Phase 0 填命令） |
+| `docs/adr/` | 架构决策（ADR），一事一文 |
+| `CONTRIBUTING.md` | 贡献与 PR 约定 |
+| `SECURITY.md` | 漏洞报告 |
+| `README.md` | 对外简介与快速开始 |
