@@ -1,6 +1,6 @@
-# AI 本地配置模板（不提交远端）
+# 本地编辑器辅助规则（模板，不提交远端）
 
-本目录文件**随 Git 提交**，供协作者复制到仓库根使用；复制后的 **`CLAUDE.md`、 `AGENTS.md`、 `.cursor/rules/`** 已在根目录 `.gitignore` 中排除，**不会 push 到 GitHub**。
+本目录**随仓库提交**，供需要的人在克隆后复制到仓库根；复制后的 **`CLAUDE.md`、`AGENTS.md`、`.cursor/rules/`** 已在根 `.gitignore` 中排除，**不会**进入远端。
 
 ## 一次性设置（Linux / WSL / macOS）
 
@@ -26,4 +26,4 @@ Copy-Item docs\templates\ai-local\cursor-rules\*.mdc .cursor\rules\ -Force
 
 ## 更新模板后
 
-若远端更新了 `docs/templates/ai-local/`，可再执行上述复制覆盖本地 AI 文件（注意备份你对本地的个性化修改）。
+若远端更新了 `docs/templates/ai-local/`，可再执行上述复制覆盖本地文件（注意备份你对本地的个性化修改）。
